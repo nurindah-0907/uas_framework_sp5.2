@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Update Data</title>
+</head>
+<%- include ('../components/head') %>
+
+    <body>
+        <%- include ('../components/navbar') %>
+            <div class="container">
+                <h1>update Handphone</h1>
+                <form method="post" action="/handphone/update">
+                    <div class="group-input">
+                        <label>ID Handphone database </label>
+                        <input type="text" name="_id" readonly value='<%= handphone._id %>'>
+                    </div>
+                    <div class="group-input">
+                        <label>ID Handphone </label>
+                        <input type="text" name="id" required value='<%= handphone.id %>'>
+                    </div>
+                    <div class="group-input">
+                        <label>Nama Handphone </label>
+                        <input type="text" name="namahp" required value='<%= handphone.namahp %>'>
+                    </div>
+                    <div class="group-input">
+                        <label>Jenis Handphone </label>
+                        <input type="text" name="jenis" required value='<%= handphone.jenis %>'>
+                    </div>
+                    <div class="group-input">
+                        <label>Harga Handphone </label>
+                        <input type="text" name="harga" required value='<%= handphone.harga %>'>
+                    </div>
+                    <div class="group-input">
+                        <label>Password </label>
+                        <input type="text" name="password" required value='<%= handphone.password %>'>
+                    </div>
+                    <button type="submit" value="submit">update</button>
+                    <a href="/handphone">Kembali</a>
+                </form>
+            </div>
+    </body>
+
+</html>

@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <title>Beranda Handphone</title>
+    <link rel="stylesheet" href="/asset/style.css">
+    <%- include ('../components/head') %>
+</head>
+
+<body>
+    <%- include ('../components/navbar') %>
+
+        <h1>Daftar Handphone </h1>
+        <h2>Total Handphone : <%= handphone.length %>
+        </h2>
+        <div class="text-center my-4"> <a href="/handphone/create" class="btn btn-warning">Tambah Handphone</a>
+        </div>
+
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+            <% if (handphone.length> 0) { %>
+                <% handphone.forEach (function(handphone){ %>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm"> <img
+                                src="https://images.tokopedia.net/img/cache/700/product-1/2018/6/18/1662589/1662589_7f4cdc15-fb41-4ecb-90de-2150f0b0ad67_400_400.jpg"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <div class="clearfix mb-3"> <span
+                                        class="float-start badge rounded-pill bg-primary"></span>
+                                    <span class="float-end price-hp">
+                                        <%= handphone.harga %>
+                                    </span>
+                                    <span class="float-end price-hp">
+                                        <%= handphone.jenis%>
+                                    </span>
+                                </div>
+                                <h5 class="card-title">
+                                    <%= handphone.namahp %>
+                                </h5>
+                                <div class="text-center my-4">
+                                    <a class="btn btn-success"
+                                        href="/handphone/update/<%= handphone._id %>/<%= handphone.id %>/<%= handphone.namahp %>/<%= handphone.jenis %>/<%= handphone.harga %>/<%= handphone.password %>">update</a>
+                                    <a class="btn btn-danger" href="/handphone/hapus/<%= handphone._id %>">hapus</a>
+                                    <a class="btn btn-warning" href="/handphone/<%= handphone._id %>">view</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+                        <% } else { %>
+                            <p>Data Handphone Kosong</p>
+                            <% } %>
+
+        </div>
+
+        <%- include ('../components/footer') %>
+</body>
+
+</html>
+
+
+
+
+
+<!-- <p></p>
+    <a href="/handphone/create">Tambah Handphone</a>
+    
+    <ul>
+
+        <% if (handphone.length>0) {%>
+        <% handphone.forEach (function(handphone){ %>
+
+        <li> <a href="/handphone/<%= handphone.id %>">
+             <%= handphone.namahp %></a>
+        </li>
+        <% }); %>
+        <% } else { %>
+        <p>Data Handphone Masih Kosong</p>
+        <% } %>
+    </ul>
+    <a href="/handphone/create"></a>
+
+    <footer>
+        <p>Handphone</p>
+    </footer>
+
+</body>
+</html> -->

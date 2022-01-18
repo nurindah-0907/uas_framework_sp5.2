@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <title>Detail Handphone</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <%- include ('../components/head') %>
+</head>
+
+<body>
+    <%- include ('../components/navbar') %>
+        <a href="/handphone">Kembali</a>
+
+        <h3>Detail Handphone</h3>
+        <ul>
+            <li>Nama HP: <strong>
+                    <%= handphone.namahp %>
+                </strong></li>
+
+            <li>Jenis HP: <strong>
+                    <%= handphone.jenis %>
+                </strong></li>
+
+            <li>Harga HP: <strong>
+                    <%= handphone.harga %>
+                </strong></li>
+        </ul>
+        <%- include ('../components/footer') %>
+
+</body>
+
+</html>

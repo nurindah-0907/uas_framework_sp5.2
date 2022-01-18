@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Tambah Data</title>
+</head>
+<%- include ('../components/head') %>
+<body>
+
+    <%- include ('../components/navbar') %>
+        <div class="container">
+            <h1>Tambah Handphone</h1>
+            <form action="/handphone" method="post">
+
+                
+        <div class="group-input">
+            <label>ID Handphone</label>
+            <input type="text" name="id">
+        </div> 
+        <div class="group-input">
+            <label>Nama Handphone</label>
+            <input type="text" name="namahp">
+        </div>
+        <div class="group-input">
+            <label>Jenis</label>
+            <input type="text" name="jenis">
+        </div>
+      
+        </div>
+        <div class="group-input">
+            <label>Harga</label>
+            <input type="text" name="harga">
+        </div>
+        <div class="group-input">
+            <label>Password </label>
+            <input type="text" name="password">
+        </div>
+        <button type="submit">Tambah</button>
+        <a href="/handphone">Kembali</a>
+    </form>
+</body>
+</html>
