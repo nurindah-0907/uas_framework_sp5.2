@@ -1,1 +1,4 @@
 # uas_framework_sp5.2
+
+NIM : 1119101747
+NAMA : NUR INDAH PRATIWI
